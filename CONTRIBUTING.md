@@ -102,8 +102,8 @@ perso/
    To run a single app:
 
    ```bash
-   npm run dev -- --filter=api
-   npm run dev -- --filter=web
+   npm run dev -- --filter=@perso/api
+   npm run dev -- --filter=@perso/web
    ```
 
 ### Default Ports
@@ -122,7 +122,7 @@ npm run lint        # Lint all workspaces
 npm run typecheck   # Type-check all workspaces
 ```
 
-Scope any task to a single workspace with `--filter`, e.g. `npm run test -- --filter=api`. Turborepo caches task outputs locally — re-running an unchanged task is near-instant.
+Scope any task to a single workspace with `--filter`, e.g. `npm run test -- --filter=@perso/api`. Turborepo caches task outputs locally — re-running an unchanged task is near-instant.
 
 ### Making Changes
 
