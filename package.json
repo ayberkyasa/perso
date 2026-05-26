@@ -1,6 +1,6 @@
 {
   "name": "perso",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "private": true,
   "description": "Self-hosted, open-source bento-grid personal dashboard.",
   "license": "AGPL-3.0",
