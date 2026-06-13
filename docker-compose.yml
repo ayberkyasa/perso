@@ -1,0 +1,21 @@
+services:
+  postgres:
+    image: postgres:16-alpine
+    container_name: perso-postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: ${DB_USERNAME:-perso}
+      POSTGRES_PASSWORD: ${DB_PASSWORD:-perso}
+      POSTGRES_DB: ${DB_NAME:-perso}
+    ports:
+      - '${DB_PORT:-5432}:5432'
+    volumes:
+      - perso-postgres-data:/var/lib/postgresql/data
+    healthcheck:
+      test: ['CMD-SHELL', 'pg_isready -U ${DB_USERNAME:-perso} -d ${DB_NAME:-perso}']
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+volumes:
+  perso-postgres-data:
