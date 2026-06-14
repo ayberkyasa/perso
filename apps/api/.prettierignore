@@ -1,0 +1,5 @@
+# Generated TypeORM migrations — machine-authored, do not reformat
+src/database/migrations/
+
+dist/
+coverage/
