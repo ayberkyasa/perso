@@ -1,5 +1,19 @@
 # Changelog
 
+## [0.1.0](https://github.com/ayberkyasa/perso/compare/v0.1.0...v0.1.0) (2026-06-14)
+
+
+### ✨ Features
+
+* **api:** add core entities for users, dashboards and widgets ([c81ca0a](https://github.com/ayberkyasa/perso/commit/c81ca0a92276cbf2257aad25048df37b6229133e))
+* **api:** add initial core schema migration ([c764115](https://github.com/ayberkyasa/perso/commit/c76411506e3ff43ca3c2f32664ab2724383385b1))
+* **api:** configure TypeORM database connection ([e012241](https://github.com/ayberkyasa/perso/commit/e012241b301ae0f033c00534cda0bd24039c1206))
+
+
+### 🔧 Build System
+
+* add Postgres service via docker-compose ([a239b1d](https://github.com/ayberkyasa/perso/commit/a239b1dcfed6b3d1a1bf7aeb44ba073e02a83985))
+
 ## 0.1.0 (2026-05-26)
 
 
