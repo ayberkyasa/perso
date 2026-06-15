@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.3.0](https://github.com/ayberkyasa/perso/compare/v0.2.0...v0.3.0) (2026-06-15)
+
+
+### ✨ Features
+
+* add agentic rules files ([fcccfc9](https://github.com/ayberkyasa/perso/commit/fcccfc9f0a7d1c0bfc30fccb03a2bee089023578))
+
 ## [0.2.0](https://github.com/ayberkyasa/perso/compare/v0.1.0...v0.2.0) (2026-06-14)
 
 
