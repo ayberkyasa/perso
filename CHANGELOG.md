@@ -1,5 +1,20 @@
 # Changelog
 
+## [0.4.0](https://github.com/ayberkyasa/perso/compare/v0.3.0...v0.4.0) (2026-07-02)
+
+
+### ✨ Features
+
+* **api:** add auth fields to the user entity ([e7531bc](https://github.com/ayberkyasa/perso/commit/e7531bce5bf506523af06b32e9f884f2b15333d7))
+* **api:** add JWT authentication endpoints and global guard ([d32f1ff](https://github.com/ayberkyasa/perso/commit/d32f1ffb001f65eacae8a461810690a2c7244abd))
+* **shared:** add authentication contract types ([deee98c](https://github.com/ayberkyasa/perso/commit/deee98c41919ae986e4d6f454d2e4cfd53ddb737))
+
+
+### 🔧 Build System
+
+* **api:** pass jest with no tests since the project uses no unit tests ([6dd41f8](https://github.com/ayberkyasa/perso/commit/6dd41f84ede312eb1218b475b2f20f59cc53b53a))
+* build upstream workspaces before lint so typed lint resolves deps ([cbb4147](https://github.com/ayberkyasa/perso/commit/cbb4147e113bc4b6adffea2f16ebab4bef5c402c))
+
 ## [0.3.0](https://github.com/ayberkyasa/perso/compare/v0.2.0...v0.3.0) (2026-06-15)
 
 
