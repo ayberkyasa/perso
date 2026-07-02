@@ -1,5 +1,23 @@
 # Changelog
 
+## [0.5.0](https://github.com/ayberkyasa/perso/compare/v0.4.0...v0.5.0) (2026-07-02)
+
+
+### ✨ Features
+
+* **web:** add auth pages and header layout ([99f7a46](https://github.com/ayberkyasa/perso/commit/99f7a46a4c8690af6003c77a18bf2321a026a649))
+* **web:** add auth store ([b522a09](https://github.com/ayberkyasa/perso/commit/b522a090a417eae066cbe959f51f533c1fcf2f01))
+* **web:** add axios service layer with bearer auth and typed requests ([3ce09f4](https://github.com/ayberkyasa/perso/commit/3ce09f4a96169c816c5c26d6adaa62e6b1d52ef3))
+* **web:** add router with authentication guards ([d681886](https://github.com/ayberkyasa/perso/commit/d681886ef1eeeb36a24396615e0a79542aa6b26d))
+* **web:** add shadcn ui primitives (card, field, input, label, separator) ([348e8ec](https://github.com/ayberkyasa/perso/commit/348e8ecb791cc1f44e0abb6ef0b707c370bb7b79))
+* **web:** add snackbar store and global snackbar component ([fc8084f](https://github.com/ayberkyasa/perso/commit/fc8084febcc0a1b723577255cb8419bcffd608fa))
+* **web:** add wired login and signup forms ([81245bf](https://github.com/ayberkyasa/perso/commit/81245bf57b18a45f293b1c4742f3eaff83efc5a4))
+
+
+### 🐛 Bug Fixes
+
+* **api:** return the full user from /auth/me ([48e9c90](https://github.com/ayberkyasa/perso/commit/48e9c90bd6c3d1a1bccf903f1a41c2a8b1eac370))
+
 ## [0.4.0](https://github.com/ayberkyasa/perso/compare/v0.3.0...v0.4.0) (2026-07-02)
 
 
