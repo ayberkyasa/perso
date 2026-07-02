@@ -25,6 +25,10 @@ export class UsersService {
     return this.usersRepository.count();
   }
 
+  findById(id: string): Promise<User | null> {
+    return this.usersRepository.findOne({ where: { id } });
+  }
+
   findByEmail(email: string): Promise<User | null> {
     return this.usersRepository.findOne({ where: { email } });
   }
