@@ -5,7 +5,7 @@ import {
   UnauthorizedException,
 } from '@nestjs/common';
 import { JwtService } from '@nestjs/jwt';
-import { AuthProvider, AuthResponse, UserRole } from '@perso/shared';
+import { AuthProvider, AuthResponse, AuthUser, UserRole } from '@perso/shared';
 import * as bcrypt from 'bcrypt';
 import { User } from '../users/entities/user.entity';
 import { UsersService } from '../users/users.service';
@@ -63,6 +63,15 @@ export class AuthService {
     return this.buildAuthResponse(user);
   }
 
+  /** Returns the current authenticated user's public profile. */
+  async getProfile(userId: string): Promise<AuthUser> {
+    const user = await this.usersService.findById(userId);
+    if (!user) {
+      throw new UnauthorizedException();
+    }
+    return this.toAuthUser(user);
+  }
+
   private async buildAuthResponse(user: User): Promise<AuthResponse> {
     const payload: JwtPayload = {
       sub: user.id,
@@ -72,15 +81,19 @@ export class AuthService {
 
     return {
       accessToken: await this.jwtService.signAsync(payload),
-      // Return the public view of the user, never the password hash.
-      user: {
-        id: user.id,
-        email: user.email,
-        name: user.name,
-        avatarUrl: user.avatarUrl,
-        role: user.role,
-        authProvider: user.authProvider,
-      },
+      user: this.toAuthUser(user),
+    };
+  }
+
+  /** Public view of a user; never exposes the password hash. */
+  private toAuthUser(user: User): AuthUser {
+    return {
+      id: user.id,
+      email: user.email,
+      name: user.name,
+      avatarUrl: user.avatarUrl,
+      role: user.role,
+      authProvider: user.authProvider,
     };
   }
 }

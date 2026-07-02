@@ -7,7 +7,7 @@ import {
   Post,
   Req,
 } from '@nestjs/common';
-import { AuthResponse } from '@perso/shared';
+import { AuthResponse, AuthUser } from '@perso/shared';
 import { Request } from 'express';
 import { AuthService } from './auth.service';
 import type { JwtPayload } from './jwt-payload.interface';
@@ -33,7 +33,7 @@ export class AuthController {
   }
 
   @Get('me')
-  me(@Req() req: Request & { user: JwtPayload }): JwtPayload {
-    return req.user;
+  me(@Req() req: Request & { user: JwtPayload }): Promise<AuthUser> {
+    return this.authService.getProfile(req.user.sub);
   }
 }
